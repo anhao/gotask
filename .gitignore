@@ -1,0 +1,10 @@
+/vendor/
+composer.lock
+*.cache
+*.log
+.idea/
+/app
+/mongo
+/example/app
+/example/go2php/app
+/example/config/app
