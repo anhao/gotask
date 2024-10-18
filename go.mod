@@ -1,8 +1,6 @@
 module github.com/anhao/gotask/v3
 
-go 1.22
-
-toolchain go1.23.2
+go 1.18
 
 require (
 	github.com/fatih/pool v3.0.0+incompatible
