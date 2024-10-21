@@ -9,6 +9,7 @@ declare(strict_types=1);
  * @contact  guxi99@gmail.com
  * @license  https://github.com/hyperf/hyperf/blob/master/LICENSE
  */
+
 namespace Hyperf\GoTask\Process;
 
 use Hyperf\GoTask\Config\DomainConfig;
@@ -54,9 +55,6 @@ class GoTaskProcess extends AbstractProcess
         parent::bind($server);
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function handle(): void
     {
         $executable = $this->config->getExecutable();

@@ -9,6 +9,7 @@ declare(strict_types=1);
  * @contact  guxi99@gmail.com
  * @license  https://github.com/hyperf/hyperf/blob/master/LICENSE
  */
+
 namespace Hyperf\GoTask;
 
 use Hyperf\GoTask\Listener\CommandListener;
@@ -16,6 +17,7 @@ use Hyperf\GoTask\Listener\Go2PhpListener;
 use Hyperf\GoTask\Listener\LogRedirectListener;
 use Hyperf\GoTask\Listener\PipeLockListener;
 use Hyperf\GoTask\Process\GoTaskProcess;
+
 use function Hyperf\Support\env;
 
 class ConfigProvider

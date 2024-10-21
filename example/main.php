@@ -39,12 +39,12 @@ run(function () {
     var_dump($task->call('App.HelloBytes', base64_encode('My Bytes'), GoTask::PAYLOAD_RAW));
     try {
         $task->call('App.HelloError', 'Hyperf');
-    } catch (\Throwable $e) {
+    } catch (Throwable $e) {
         var_dump($e);
     }
     try {
         $task->call('App.HelloPanic', '');
-    } catch (\Throwable $e) {
+    } catch (Throwable $e) {
         var_dump($e);
     }
 });

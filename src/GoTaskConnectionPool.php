@@ -9,6 +9,7 @@ declare(strict_types=1);
  * @contact  guxi99@gmail.com
  * @license  https://github.com/hyperf/hyperf/blob/master/LICENSE
  */
+
 namespace Hyperf\GoTask;
 
 use Hyperf\Contract\ConnectionInterface;
@@ -16,6 +17,7 @@ use Hyperf\GoTask\Config\DomainConfig;
 use Hyperf\Pool\Frequency;
 use Hyperf\Pool\Pool;
 use Psr\Container\ContainerInterface;
+
 use function Hyperf\Support\make;
 
 class GoTaskConnectionPool extends Pool

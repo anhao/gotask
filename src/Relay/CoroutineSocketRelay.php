@@ -144,7 +144,6 @@ class CoroutineSocketRelay implements RelayInterface
     }
 
     /**
-     * @return Socket
      * @throws GoridgeException
      */
     private function createSocket(): Socket

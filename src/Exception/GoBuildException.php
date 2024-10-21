@@ -9,10 +9,9 @@ declare(strict_types=1);
  * @contact  guxi99@gmail.com
  * @license  https://github.com/hyperf/hyperf/blob/master/LICENSE
  */
+
 namespace Hyperf\GoTask\Exception;
 
 use RuntimeException;
 
-class GoBuildException extends RuntimeException
-{
-}
+class GoBuildException extends RuntimeException {}

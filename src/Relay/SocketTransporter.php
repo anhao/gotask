@@ -18,11 +18,8 @@ use Spiral\Goridge\Frame;
 
 use function socket_last_error;
 use function socket_recv;
-use function socket_select;
 use function socket_strerror;
 use function sprintf;
-
-use const MSG_WAITALL;
 
 trait SocketTransporter
 {
@@ -115,8 +112,8 @@ trait SocketTransporter
         }
 
         $read = [$this->socket];
-        $write = null;
-        $except = null;
+        $write = [];
+        $except = [];
 
         $is = swoole_client_select($read, $write, $except, 0);
 

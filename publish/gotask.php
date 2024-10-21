@@ -9,13 +9,23 @@ declare(strict_types=1);
  * @contact  guxi99@gmail.com
  * @license  https://github.com/hyperf/hyperf/blob/master/LICENSE
  */
+use Hyperf\GoTask\ConfigProvider;
+
+/**
+ * This file is part of Hyperf/GoTask.
+ *
+ * @see     https://www.github.com/hyperf/gotask
+ * @document  https://www.github.com/hyperf/gotask
+ * @contact  guxi99@gmail.com
+ * @license  https://github.com/hyperf/hyperf/blob/master/LICENSE
+ */
 return [
     'enable' => true,
     'executable' => BASE_PATH . '/bin/app',
-    'socket_address' => \Hyperf\GoTask\ConfigProvider::address(),
+    'socket_address' => ConfigProvider::address(),
     'go2php' => [
         'enable' => false,
-        'address' => \Hyperf\GoTask\ConfigProvider::address(),
+        'address' => ConfigProvider::address(),
     ],
     'go_build' => [
         'enable' => false,

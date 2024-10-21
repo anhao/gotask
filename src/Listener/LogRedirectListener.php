@@ -9,6 +9,7 @@ declare(strict_types=1);
  * @contact  guxi99@gmail.com
  * @license  https://github.com/hyperf/hyperf/blob/master/LICENSE
  */
+
 namespace Hyperf\GoTask\Listener;
 
 use Hyperf\Contract\StdoutLoggerInterface;
@@ -43,17 +44,11 @@ class LogRedirectListener implements ListenerInterface
         $this->config = $container->get(DomainConfig::class);
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function listen(): array
     {
         return [MainWorkerStart::class];
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function process(object $event): void
     {
         if (! $this->config->shouldLogRedirect()) {

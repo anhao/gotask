@@ -9,6 +9,7 @@ declare(strict_types=1);
  * @contact  guxi99@gmail.com
  * @license  https://github.com/hyperf/hyperf/blob/master/LICENSE
  */
+
 namespace Hyperf\GoTask\Listener;
 
 use Hyperf\Event\Contract\ListenerInterface;
@@ -34,9 +35,6 @@ class CommandListener implements ListenerInterface
         $this->config = $config;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function listen(): array
     {
         return [
@@ -44,9 +42,6 @@ class CommandListener implements ListenerInterface
         ];
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function process(object $event): void
     {
         if (! $this->config->isEnabled()) {

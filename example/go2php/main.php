@@ -9,9 +9,10 @@ declare(strict_types=1);
  * @contact  guxi99@gmail.com
  * @license  https://github.com/hyperf/hyperf/blob/master/LICENSE
  */
-
 use Hyperf\GoTask\Listener\SocketIPCReceiver;
+use Hyperf\GoTask\Wrapper\ByteWrapper;
 use Swoole\Process;
+
 use function Swoole\Coroutine\run;
 
 require __DIR__ . '/../../vendor/autoload.php';
@@ -49,11 +50,11 @@ class Example
 
     public function HelloBytes(string $payload)
     {
-        return new \Hyperf\GoTask\Wrapper\ByteWrapper(base64_encode($payload));
+        return new ByteWrapper(base64_encode($payload));
     }
 
     public function HelloError(array $payload)
     {
-        throw new \Exception('err');
+        throw new Exception('err');
     }
 }

@@ -9,6 +9,7 @@ declare(strict_types=1);
  * @contact  guxi99@gmail.com
  * @license  https://github.com/hyperf/hyperf/blob/master/LICENSE
  */
+
 namespace HyperfTest\Cases;
 
 use Hyperf\GoTask\IPC\SocketIPCSender;
@@ -87,11 +88,11 @@ class SocketIPCReceiverTest extends AbstractTestCase
     {
         $this->assertEquals(
             'Hello, Hyperf!',
-            $task->call('HyperfTest\\Stub::HelloString', 'Hyperf')
+            $task->call('HyperfTest\Stub::HelloString', 'Hyperf')
         );
         $this->assertEquals(
             ['hello' => ['jack', 'jill']],
-            $task->call('HyperfTest\\Stub::HelloInterface', ['jack', 'jill'])
+            $task->call('HyperfTest\Stub::HelloInterface', ['jack', 'jill'])
         );
         $this->assertEquals(
             ['hello' => [
@@ -99,7 +100,7 @@ class SocketIPCReceiverTest extends AbstractTestCase
                 'lastName' => 'James',
                 'id' => 23,
             ]],
-            $task->call('HyperfTest\\Stub::HelloStruct', [
+            $task->call('HyperfTest\Stub::HelloStruct', [
                 'firstName' => 'LeBron',
                 'lastName' => 'James',
                 'id' => 23,
@@ -108,10 +109,10 @@ class SocketIPCReceiverTest extends AbstractTestCase
 
         $this->assertEquals(
             'My Bytes',
-            $task->call('HyperfTest\\Stub::HelloBytes', base64_encode('My Bytes'), RelayInterface::PAYLOAD_RAW)
+            $task->call('HyperfTest\Stub::HelloBytes', base64_encode('My Bytes'), RelayInterface::PAYLOAD_RAW)
         );
         try {
-            $task->call('HyperfTest\\Stub::HelloError', 'Hyperf');
+            $task->call('HyperfTest\Stub::HelloError', 'Hyperf');
         } catch (Throwable $e) {
             $this->assertInstanceOf(ServiceException::class, $e);
         }

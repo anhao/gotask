@@ -9,6 +9,7 @@ declare(strict_types=1);
  * @contact  guxi99@gmail.com
  * @license  https://github.com/hyperf/hyperf/blob/master/LICENSE
  */
+
 namespace HyperfTest;
 
 use Hyperf\Config\Config;
@@ -22,6 +23,7 @@ use Hyperf\GoTask\Listener\SocketIPCReceiver;
 use Hyperf\Utils\ApplicationContext;
 use Psr\Log\LoggerInterface;
 use Swoole\Timer;
+
 use function Swoole\Coroutine\run;
 
 require __DIR__ . '/../vendor/autoload.php';

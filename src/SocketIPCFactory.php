@@ -9,10 +9,12 @@ declare(strict_types=1);
  * @contact  guxi99@gmail.com
  * @license  https://github.com/hyperf/hyperf/blob/master/LICENSE
  */
+
 namespace Hyperf\GoTask;
 
 use Hyperf\GoTask\Config\DomainConfig;
 use Hyperf\GoTask\IPC\SocketIPCSender;
+
 use function Hyperf\Support\make;
 
 class SocketIPCFactory

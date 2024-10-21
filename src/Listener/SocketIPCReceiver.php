@@ -16,12 +16,6 @@ use Hyperf\Context\ApplicationContext;
 use Hyperf\ExceptionHandler\Formatter\FormatterInterface;
 use Hyperf\GoTask\IPC\IPCSenderInterface;
 use Hyperf\GoTask\Relay\ConnectionRelay;
-use Hyperf\GoTask\Wrapper\ByteWrapper;
-use Spiral\Goridge\Exception\HeaderException;
-use Spiral\Goridge\Exception\TransportException;
-use Spiral\Goridge\Frame;
-use Spiral\Goridge\RelayInterface as Relay;
-use Spiral\Goridge\RPC\AbstractRPC;
 use Spiral\Goridge\RPC\Exception\ServiceException;
 use Swoole\Coroutine\Server;
 use Swoole\Coroutine\Server\Connection;
@@ -75,7 +69,7 @@ class SocketIPCReceiver
         $this->server->handle(function (Connection $conn) {
             $relay = new ConnectionRelay($conn);
             while ($this->quit !== true) {
-                throw new \Exception("TODO");
+                throw new \Exception('TODO');
             }
         });
         $this->server->start();

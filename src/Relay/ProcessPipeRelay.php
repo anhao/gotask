@@ -9,6 +9,7 @@ declare(strict_types=1);
  * @contact  guxi99@gmail.com
  * @license  https://github.com/hyperf/hyperf/blob/master/LICENSE
  */
+
 namespace Hyperf\GoTask\Relay;
 
 use Error;
@@ -70,7 +71,6 @@ class ProcessPipeRelay implements RelayInterface
     }
 
     /**
-     * @return Socket
      * @throws GoridgeException
      */
     private function createSocket(): Socket

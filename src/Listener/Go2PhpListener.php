@@ -9,6 +9,7 @@ declare(strict_types=1);
  * @contact  guxi99@gmail.com
  * @license  https://github.com/hyperf/hyperf/blob/master/LICENSE
  */
+
 namespace Hyperf\GoTask\Listener;
 
 use Hyperf\Command\Event\BeforeHandle;
@@ -17,6 +18,7 @@ use Hyperf\Framework\Event\AfterWorkerStart;
 use Hyperf\GoTask\Config\DomainConfig;
 use Hyperf\GoTask\WithGoTask;
 use Psr\Container\ContainerInterface;
+
 use function Hyperf\Support\make;
 
 class Go2PhpListener implements ListenerInterface
@@ -37,17 +39,11 @@ class Go2PhpListener implements ListenerInterface
         $this->config = $container->get(DomainConfig::class);
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function listen(): array
     {
         return [AfterWorkerStart::class, BeforeHandle::class];
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function process(object $event): void
     {
         if (! $this->config->shouldEnableGo2Php()) {
