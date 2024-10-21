@@ -1,12 +1,12 @@
 module github.com/anhao/gotask/v3
 
-go 1.18
+go 1.21
 
 require (
 	github.com/fatih/pool v3.0.0+incompatible
 	github.com/oklog/run v1.1.0
 	github.com/pkg/errors v0.9.1
-	github.com/roadrunner-server/goridge/v3 v3.8.3
+	github.com/roadrunner-server/goridge/v3 v3.6.3
 	go.mongodb.org/mongo-driver v1.17.1
 )
 
